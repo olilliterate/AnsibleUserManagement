@@ -4,7 +4,6 @@ users:
     ssh_key: 821jddadf
   - username: Bob
     group: sudo
-    root: false
     ssh_key: 821jddadf
 
   - username: Claire

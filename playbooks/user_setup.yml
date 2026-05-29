@@ -6,27 +6,8 @@
     - ../vars/example_users.yml
 
   tasks:
-    - name: Create users
-      ansible.builtin.user:
-        name: "{{ item.username }}"
-        shell: /bin/bash
-        state: "{{ item.state | default('present') }}"
-      loop: "{{ users }}"
+    - name: Create users and set SSH keys
+      ansible.builtin.include_tasks:
+        file: /home/service/AnsibleUserManagement/tasks/setup_users.yml
 
-    - name: Add user groups
-      ansible.builtin.user:
-        name: "{{ item.username }}"
-        group: "{{ item.group }}"
-      loop: "{{ users }}"
-      when: item.group is defined
-    - name: Print SSH key
-      ansible.builtin.debug:
-        msg: "{{ item.ssh_key }}"
-      loop: "{{ users }}"
-
-    - name: Add SSH keys
-      ansible.posix.authorized_key:
-        user: "{{ item.username }}"
-        key: "{{ item.ssh_key }}"
-        state: "{{ item.state | default('present') }}"
       loop: "{{ users }}"
