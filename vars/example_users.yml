@@ -6,9 +6,11 @@ users:
     group: sudo
     root: false
     ssh_key: 821jddadf
+
   - username: Claire
     group: sudo
     ssh_key: 821jddadf
+
   - username: Daniel
     ssh_key: 821jddadf
   - username: Eleanor
