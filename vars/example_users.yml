@@ -1,11 +1,11 @@
-exampleUsers:
+users:
   - username: Alice
     group: sudo
-    shh_key: 821jddadf
+    ssh_key: 821jddadf
   - username: Bob
     group: sudo
     root: false
-    shh_key: 821jddadf
+    ssh_key: 821jddadf
   - username: Claire
     group: sudo
     ssh_key: 821jddadf
