@@ -13,6 +13,12 @@
         state: "{{ item.state | default('present') }}"
       loop: "{{ users }}"
 
+    - name: Add user groups
+      ansible.builtin.user:
+        name: "{{ item.username }}"
+        group: "{{ item.group }}"
+      loop: "{{ users }}"
+      when: item.group is defined
     - name: Print SSH key
       ansible.builtin.debug:
         msg: "{{ item.ssh_key }}"
