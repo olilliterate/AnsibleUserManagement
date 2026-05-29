@@ -1,0 +1,27 @@
+exampleUsers:
+  - username: Alice
+    group: "RIDs"
+    root: false
+    public-key: 821jddadf
+  - name: Bob
+    group:
+      - RIDs
+      - sudo
+    root: false
+    public-key: 821jddadf
+  - username: Claire
+    group:
+      - RIDs
+      - sudo
+    root: false
+    public-key: 821jddadf
+  - username: Daniel
+    group:
+      -
+    root: false
+    public-key: 821jddadf
+  - username: Eleanor
+    group:
+      -
+    root: false
+    public-key: 821jddadf
