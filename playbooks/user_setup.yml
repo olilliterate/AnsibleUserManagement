@@ -12,7 +12,7 @@
         shell: /bin/bash
         state: "{{ item.state | default('present') }}"
       loop: "{{ users }}"
-    
+
     - name: Add SSH keys
       ansible.posix.authorized_key:
         user: "{{ item.username }}"
