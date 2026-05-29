@@ -3,6 +3,3 @@ all:
     rid-duncan-vm-01:
       ansible_host: 10.134.16.20
       ansible_user: service
-    rid-oliver-vm-01:
-      ansible_host: 10.134.16.10
-      ansible_user: service
