@@ -1,27 +1,15 @@
 exampleUsers:
   - username: Alice
-    group: "RIDs"
+    group: sudo
+    shh_key: 821jddadf
+  - username: Bob
+    group: sudo
     root: false
-    public-key: 821jddadf
-  - name: Bob
-    group:
-      - RIDs
-      - sudo
-    root: false
-    public-key: 821jddadf
+    shh_key: 821jddadf
   - username: Claire
-    group:
-      - RIDs
-      - sudo
-    root: false
-    public-key: 821jddadf
+    group: sudo
+    ssh_key: 821jddadf
   - username: Daniel
-    group:
-      -
-    root: false
-    public-key: 821jddadf
+    ssh_key: 821jddadf
   - username: Eleanor
-    group:
-      -
-    root: false
-    public-key: 821jddadf
+    ssh_key: 821jddadf
